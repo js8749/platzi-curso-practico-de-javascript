@@ -37,3 +37,26 @@ console.log("El area del cuadrado es: " + areaTriangulo + "cm^2");
 console.groupEnd();
 
 // Codigo del Circulo
+console.group("Circulos");
+
+// Radio
+const radioCirculo = 4;
+console.log("El Radio del Circulo es: " + radioCirculo + "cm");
+// Diametro
+const diametroCirculo = radioCirculo * 2;
+console.log("El Diametro del Circulo es: " + diametroCirculo + "cm");
+
+// Pi
+const PI = Math.PI;
+console.log("El valor de PI del Circulo es: " + PI + "cm");
+
+//Circunferencia
+const perimetroCirculo = diametroCirculo * PI;
+console.log("El Perimetro del Circulo es: " + perimetroCirculo + "cm");
+
+// Area
+const areaCirculo = (radioCirculo * radioCirculo) * PI;
+console.log("El Area del Circulo es: " + areaCirculo + "cm^2");
+
+
+console.groupEnd();
