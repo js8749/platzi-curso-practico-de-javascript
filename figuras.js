@@ -35,3 +35,5 @@ const areaTriangulo = baseTriangulo * alturaTriangulo / 2;
 console.log("El area del cuadrado es: " + areaTriangulo + "cm^2");
 
 console.groupEnd();
+
+// Codigo del Circulo
