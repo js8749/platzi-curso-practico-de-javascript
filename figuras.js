@@ -1,62 +1,123 @@
 // Codigo del Cuadrado
 console.group("Cuadrado")
-const ladoCuadrado = 5;
-console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
 
-const perimetroCuadrado = ladoCuadrado * 4;
-console.log("El perimetro del cuadrado es: " + perimetroCuadrado + "cm");
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
-console.log("El area del cuadrado es: " + areaCuadrado + "cm^2");
+function perimetroCuadrado(lado){
+    return lado * 4;
+}
+
+
+function areaCuadrado(lado) {
+    return lado * lado
+}
+
+
 console.groupEnd();
 
 // Codigo del Triangulo
 console.group("Triangulos");
 
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
 
-console.log(
-    "Los lados del triangulo miden: "
-     + ladoTriangulo1 
-     + "cm, "
-     + ladoTriangulo2 
-     + "cm, "
-     + baseTriangulo 
-     + "cm, "
-);
-const alturaTriangulo = 5.5;
-console.log("La altura del triangulo es de: " + alturaTriangulo + "cm");
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log("El perimetro del cuadrado es: " + perimetroTriangulo + "cm");
+function perimetroTriangulo(lado1, lado2, base) {
+    return Number(lado1) + Number(lado2) + Number(base);
+}
 
-const areaTriangulo = baseTriangulo * alturaTriangulo / 2;
-console.log("El area del cuadrado es: " + areaTriangulo + "cm^2");
+function areaTriangulo(base, altura) {
+return (Number(base) * Number(altura)) / 2;
+
+} 
+
+function hypotenusa(lado1, base) {
+    return (Math.sqrt((lado1 * lado1) + ((base / 2) * (base / 2))))
+}
+
 
 console.groupEnd();
 
 // Codigo del Circulo
 console.group("Circulos");
 
-// Radio
-const radioCirculo = 4;
-console.log("El Radio del Circulo es: " + radioCirculo + "cm");
+
 // Diametro
-const diametroCirculo = radioCirculo * 2;
-console.log("El Diametro del Circulo es: " + diametroCirculo + "cm");
+
+function diametroCirculo(radio) {
+    return radio * 2;
+}
+
+
 
 // Pi
 const PI = Math.PI;
-console.log("El valor de PI del Circulo es: " + PI + "cm");
+
 
 //Circunferencia
-const perimetroCirculo = diametroCirculo * PI;
-console.log("El Perimetro del Circulo es: " + perimetroCirculo + "cm");
+
+function perimetroCirculo(radio) {
+    const diametro = diametroCirculo(radio);
+    return diametro * PI
+}
+
+
 
 // Area
-const areaCirculo = (radioCirculo * radioCirculo) * PI;
-console.log("El Area del Circulo es: " + areaCirculo + "cm^2");
+
+function areaCirculo(radio) {
+    return (radio * radio) * PI
+}
+
+
 
 
 console.groupEnd();
+
+// conectando con HTML
+
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("inputCuadrado");
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("inputCuadrado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area)
+}
+
+// triangulo
+
+function calcularPerimetroTriangulo() {
+    const lado1 = document.getElementById("lado1");
+    const value1 = lado1.value;
+    const lado2 = document.getElementById("lado2");
+    const value2 = lado2.value;
+    const base = document.getElementById("base");
+    const value3 = base.value;
+
+    const perimetro = perimetroTriangulo(value1, value2, value3);
+    alert(perimetro);
+}
+
+function calcularAreaTriangulo() {
+    const lado1 = document.getElementById("lado1");
+    const value1 = lado1.value;
+    const base = document.getElementById("base")
+    const value3 = base.value;
+
+    const altura = hypotenusa(value1, value3)
+
+    const area = areaTriangulo(value3, altura);
+    alert(area);
+
+    console.log(altura);
+    console.log(area);
+    
+
+}
+
+//circulo
+
