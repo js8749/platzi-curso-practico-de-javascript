@@ -41,7 +41,7 @@ console.group("Circulos");
 // Diametro
 
 function diametroCirculo(radio) {
-    return radio * 2;
+    return (Number(radio) * 2);
 }
 
 
@@ -53,8 +53,8 @@ const PI = Math.PI;
 //Circunferencia
 
 function perimetroCirculo(radio) {
-    const diametro = diametroCirculo(radio);
-    return diametro * PI
+    // const diametro = diametroCirculo(radio);
+    return (Number(radio * 2)) * PI
 }
 
 
@@ -62,7 +62,7 @@ function perimetroCirculo(radio) {
 // Area
 
 function areaCirculo(radio) {
-    return (radio * radio) * PI
+    return (Number(radio) * Number(radio)) * PI
 }
 
 
@@ -121,3 +121,27 @@ function calcularAreaTriangulo() {
 
 //circulo
 
+function calcularDiametro() {
+    const radio1 = document.getElementById("radio1");
+    const valueR = radio1.value;
+
+    const diametro = diametroCirculo(valueR);
+    alert(diametro);
+}
+function calcularPerimetroC() {
+    const radio1 = document.getElementById("radio1");
+    const valueR = radio1.value;
+
+    
+
+    const perimetro = perimetroCirculo(valueR);
+    alert(perimetro);
+    console.log(diametros);
+}
+function calcularAreaC() {
+    const radio1 = document.getElementById("radio1");
+    const valueR = radio1.value;
+
+    const area = areaCirculo(valueR);
+    alert(area)
+}

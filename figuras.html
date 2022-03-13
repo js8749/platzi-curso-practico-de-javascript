@@ -33,7 +33,7 @@
         <h2>
             Calcula el area y perimetro del triangulo:
         </h2>
-        <form action=""></form>
+        <form action="">
             <label for="inputTriangulo"></label>
             <input id="lado1" type="number" placeholder="lado1">
             <input id="lado2" type="number" placeholder="lado2">
@@ -45,7 +45,25 @@
             <button type="button" onclick="calcularAreaTriangulo()">
                 Calcular Area 
             </button>
-
+        </form>
+    </section>
+    <section>
+        <h2>
+            Calcula el area y perimetro del circulo:
+        </h2>
+        <form action="">
+            <label for="inputCirculo"></label>
+            <input id="radio1" type="number" placeholder="Radio">
+            <button type="button" onclick="calcularDiametro()">
+                Calcular Diametro
+            </button>
+            <button type="button" onclick="calcularPerimetroC()">
+                Calcular Perimetro
+            </button>
+            <button type="button" onclick="calcularAreaC()">
+                Calcular Area
+            </button>
+        </form>
     </section>
    <script src="./figuras.js"></script> 
 </body>
