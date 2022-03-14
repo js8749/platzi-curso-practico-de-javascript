@@ -105,16 +105,24 @@ function calcularPerimetroTriangulo() {
 function calcularAreaTriangulo() {
     const lado1 = document.getElementById("lado1");
     const value1 = lado1.value;
+    const lado2 = document.getElementById("lado2");
+    const value2 = lado2.value;
     const base = document.getElementById("base")
     const value3 = base.value;
 
-    const altura = hypotenusa(value1, value3)
+    if (value1 === value2 && value1 != value3) {
 
-    const area = areaTriangulo(value3, altura);
-    alert(area);
+        const altura = hypotenusa(value1, value3)
+    
+        const area = areaTriangulo(value3, altura);
+        alert(area);
+        console.log(altura);
+        console.log(area);
+    } else {
+        alert("Este triangulo no es isosceles, pronto podras calcularlo")
+    }
 
-    console.log(altura);
-    console.log(area);
+
     
 
 }
